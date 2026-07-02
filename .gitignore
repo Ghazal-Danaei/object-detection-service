@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+env/
+
+# Model weights / exports (downloaded or generated, not committed)
+*.pt
+*.onnx
+*.engine
+models/*
+!models/.gitkeep
+
+# Sample images (add your own locally)
+samples/*
+!samples/.gitkeep
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
