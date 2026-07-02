@@ -11,22 +11,7 @@ deployable service → tested and CI-checked.**
 
 ---
 
-## Why this project
 
-It exercises the full ML-engineering loop in one small, readable codebase:
-
-- **Computer vision / object detection** — YOLOv8 detector, with hand-written
-  IoU, non-maximum suppression, and Average Precision (`src/metrics.py`) so the
-  detection *mechanics* are explicit, not hidden behind a library call.
-- **Inference optimization** — export PyTorch → **ONNX**, run with ONNX Runtime,
-  and a benchmark that reports latency **and** verifies output parity against
-  the PyTorch reference (`scripts/benchmark.py`).
-- **Production software** — a **FastAPI** service with Pydantic schemas, loaded
-  once at startup, with health and inference endpoints.
-- **Reproducible environments** — a self-contained **Docker** image that
-  downloads weights and exports the ONNX model at build time.
-- **Software-engineering hygiene** — unit + API tests (`pytest`) and a GitHub
-  Actions **CI** pipeline.
 
 ## Architecture
 
@@ -43,10 +28,7 @@ It exercises the full ML-engineering loop in one small, readable codebase:
                               JSON: boxes, scores, class names, latency
 ```
 
-## Tech stack
 
-PyTorch · Ultralytics YOLOv8 · ONNX · ONNX Runtime · FastAPI · Pydantic ·
-NumPy · Pillow · Docker · pytest · GitHub Actions
 
 ## Project structure
 
