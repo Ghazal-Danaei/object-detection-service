@@ -1,9 +1,7 @@
 # Object Detection Service — YOLOv8 → ONNX → FastAPI → Docker
 
 An end-to-end object-detection micro-service that takes a model from PyTorch
-weights through ONNX optimization to a containerized REST API. Built to mirror
-a production ML-engineering workflow: **data in → model → optimized inference →
-deployable service → tested and CI-checked.**
+weights through ONNX optimization to a containerized REST API. 
 
 [![CI](https://github.com/USERNAME/object-detection-service/actions/workflows/ci.yml/badge.svg)](https://github.com/USERNAME/object-detection-service/actions/workflows/ci.yml)
 
