@@ -143,24 +143,7 @@ The test suite covers the detection metrics (IoU, NMS, AP) and the API contract.
 The API tests inject a fake detector, so they run in CI without torch,
 onnxruntime, or model weights.
 
-## A note on evaluation / error analysis
 
-`src/metrics.py` implements single-class Average Precision the way detection
-benchmarks compute it (area under the precision–recall curve, VOC all-points
-interpolation). Extending this to mAP across classes and IoU thresholds (the
-COCO 0.50:0.95 protocol) is the natural next step for proper model evaluation
-and per-class error analysis.
-
-## Roadmap
-
-- [ ] **TensorRT** engine export and FP16/INT8 inference for further GPU speedup,
-      with an INT8 calibration step.
-- [ ] mAP@0.50:0.95 evaluation and per-class / per-object-size error breakdown.
-- [ ] Batch + async inference and a `/detect/batch` endpoint.
-- [ ] Orchestrated retraining/evaluation pipeline (Prefect or Airflow) with a
-      model-promotion gate.
-- [ ] Observability: request metrics, latency histograms, and prediction-drift
-      monitoring.
 
 ## License
 
